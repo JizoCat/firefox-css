@@ -75,7 +75,8 @@ toolbar toolbarbutton > .toolbarbutton-badge-stack,
 .findbar-textbox~toolbarbutton,
 toolbarbutton.scrollbutton-up,
 toolbarbutton.scrollbutton-down{ background-color: transparent !important;}
-.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){ background-color: transparent !important }
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected])
+{ background-color: transparent !important }
 
 /*Tabs below nav bar
 #nav-bar { -moz-box-ordinal-group: 1 !important; }
