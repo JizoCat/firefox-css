@@ -1,0 +1,159 @@
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+/* Remove mac native buttons thing */
+.titlebar-buttonbox-container { 
+  display: none; 
+  border-right: none}
+
+/* Hide inactive tab close buttons until hovered */
+.tabbrowser-tab:not([pinned="true"]):not([selected]):not(:hover) .tab-close-button {
+  display: none !important; }
+
+/* Hide tab borders */
+:root {
+  --tabs-border: transparent !important;
+  }
+
+/* Hide separators between background tabs */
+.tabbrowser-tab::before {
+  color: purple !important; 
+  opacity: 0 !important; 
+  }
+
+/* Hide border from rightmost background tab */
+.tabbrowser-tab::after {
+  color: green !important; 
+  opacity: 0 !important; 
+  }
+
+/* Remove placeholder right border */
+.titlebar-placeholder {
+  border: none !important;
+  }
+
+/* Remove border under navbar */
+#navigator-toolbox::after {
+  border-bottom: 0px !important;
+  }
+
+/* New Tab Flash */
+:root{--newtab-textbox-background-color:#2e3440;}
+
+#navigator-toolbox::after {
+  border-bottom: 0px !important;
+}
+#nav-bar {
+  box-shadow: none !important;
+  border-top: none !important;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+/* FINDBAR TWEAKS */
+
+findbar {
+-moz-box-ordinal-group: 0   !important;
+direction:              rtl !important;
+
+uncomment for speedy boi
+transition-property:        unset !important;
+transition-duration:        unset !important;
+transition-timing-function: unset !important;
+	 
+These two lines should fix the border (previously its on the upside, you wanna flip it over)
+border-top-width:           0                                            !important;
+border-bottom:              1px solid var(--toolbox-border-bottom-color) !important;
+border-top:                 none                                         !important;
+	  
+}
+
+findbar .findbar-textbox { direction: ltr !important; }
+
+.browserContainer {
+    position: relative;
+}
+findbar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+/* REmove that box thing to the right of the tabs */
+.titlebar-placeholder[type="pre-tabs"] {
+display: none !important;
+width: 0px !important;
+max-width: 0px !important;
+}
+.titlebar-spacer[type="pre-tabs"] {
+display: none !important;
+width: 0px !important;
+max-width: 0px !important;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+/*Tabs below nav bar*//*
+#nav-bar { 
+  -moz-box-ordinal-group: 1 !important;
+}
+#PersonalToolbar { 
+  -moz-box-ordinal-group: 2 !important;
+}
+#titlebar { 
+  -moz-box-ordinal-group: 3 !important;
+}*/
+
+
+/*Hide tabs bar if one tab is opened*/ /*
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox {
+  min-height: 0 !important;
+}
+
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
+  visibility: collapse !important;
+}
+
+#tabbrowser-tabs #tabs-newtab-button {
+  visibility: collapse !important;
+} */
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+.tab-content[selected="true"]
+{
+    background-color: #d8dee9 !important;
+    font-weight: bold !important;
+    color : #5e81ac !important;
+}
+
+#urlbar{
+  box-shadow: none !important;
+  background-color: #e5e9f0 !important;
+  border: none !important;
+  color : #5e81ac !important;
+  font-weight: bold !important;
+}
+
+/*
+#nav-bar {
+background-color: #eceff4 !important;
+}*/
+
+/*
+#tabbrowser-tabs {
+background-color: #2e3440 !important;
+} */
+
+#navigator-toolbox {
+  border-bottom-color: #d8dee9 !important;
+}
+
+/*****************************************************************************************************/
+/*****************************************************************************************************/
