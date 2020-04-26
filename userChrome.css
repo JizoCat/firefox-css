@@ -32,20 +32,32 @@
   border: none !important;
   }
 
-/* Remove border under navbar */
-#navigator-toolbox::after {
-  border-bottom: 0px !important;
-  }
+/* tab hover highlight */
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){
+  background-color: transparent !important }
 
-/* New Tab Flash */
-:root{--newtab-textbox-background-color:#2e3440;}
 
-#navigator-toolbox::after {
-  border-bottom: 0px !important;
+/*****************************************************************************************************/
+/*****************************************************************************************************/
+
+#navigator-toolbox { border-bottom-color: #f3f2f1 !important; }
+
+#navigator-toolbox { --tabs-border-color: transparent !important; }
+
+#urlbar{
+  border: none !important;
+  font-weight: bold !important;
+  background-color: #eceff4 !important;
+  color: #2e3440 !important;
 }
-#nav-bar {
+/*
+#urlbar:hover{
   box-shadow: none !important;
-  border-top: none !important;
+} */
+
+#TabsToolbar .tabbrowser-tab .tab-line {
+  background-color: #00aadd !important;
+  height: 3px !important;
 }
 
 /*****************************************************************************************************/
@@ -66,7 +78,6 @@ These two lines should fix the border (previously its on the upside, you wanna f
 border-top-width:           0                                            !important;
 border-bottom:              1px solid var(--toolbox-border-bottom-color) !important;
 border-top:                 none                                         !important;
-	  
 }
 
 findbar .findbar-textbox { direction: ltr !important; }
@@ -98,7 +109,7 @@ max-width: 0px !important;
 /*****************************************************************************************************/
 /*****************************************************************************************************/
 
-/*Tabs below nav bar*//*
+/*Tabs below nav bar*/ /*
 #nav-bar { 
   -moz-box-ordinal-group: 1 !important;
 }
@@ -107,7 +118,7 @@ max-width: 0px !important;
 }
 #titlebar { 
   -moz-box-ordinal-group: 3 !important;
-}*/
+} */
 
 
 /*Hide tabs bar if one tab is opened*/ /*
@@ -122,38 +133,6 @@ max-width: 0px !important;
 #tabbrowser-tabs #tabs-newtab-button {
   visibility: collapse !important;
 } */
-
-/*****************************************************************************************************/
-/*****************************************************************************************************/
-
-.tab-content[selected="true"]
-{
-    background-color: #d8dee9 !important;
-    font-weight: bold !important;
-    color : #5e81ac !important;
-}
-
-#urlbar{
-  box-shadow: none !important;
-  background-color: #e5e9f0 !important;
-  border: none !important;
-  color : #5e81ac !important;
-  font-weight: bold !important;
-}
-
-/*
-#nav-bar {
-background-color: #eceff4 !important;
-}*/
-
-/*
-#tabbrowser-tabs {
-background-color: #2e3440 !important;
-} */
-
-#navigator-toolbox {
-  border-bottom-color: #d8dee9 !important;
-}
 
 /*****************************************************************************************************/
 /*****************************************************************************************************/
