@@ -1,4 +1,0 @@
-/* Hide inactive tab close buttons until hovered */
-
-.tabbrowser-tab:not([pinned="true"]):not([selected]):not(:hover) .tab-close-button {
-  display: none !important; }
