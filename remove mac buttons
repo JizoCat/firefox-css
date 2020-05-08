@@ -1,3 +1,0 @@
-/* Remove mac native buttons thing */
-
-.titlebar-buttonbox-container { display: none; }
