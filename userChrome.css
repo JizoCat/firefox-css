@@ -1,80 +1,80 @@
-/*****************************************************************************************************/
-/*****************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
 
 /* Remove mac native buttons thing */
 .titlebar-buttonbox-container { 
   display: none; 
-  border-right: none}
+  border-right: none
+}
+
+/* sytle tab highlight line */
+.tab-line {
+    height: 3px !important;
+    background-color: #f100a1 !important;
+}
 
 /* Hide inactive tab close buttons until hovered */
 .tabbrowser-tab:not([pinned="true"]):not([selected]):not(:hover) .tab-close-button {
-  display: none !important; }
+  display: none !important; 
+}
+
+/* Hide all tabs */ /*
+#TabsToolbar { visibility: collapse !important; } */
 
 /* Hide tab borders */
 :root {
   --tabs-border: transparent !important;
-  }
-
-/* Hide separators between background tabs */
+}
 .tabbrowser-tab::before {
-  color: purple !important; 
+  color: green !important; 
   opacity: 0 !important; 
-  }
-
-/* Hide border from rightmost background tab */
+}
 .tabbrowser-tab::after {
   color: green !important; 
   opacity: 0 !important; 
-  }
-
-/* Remove placeholder right border */
+}
 .titlebar-placeholder {
   border: none !important;
-  }
-
-/* tab hover highlight */
-.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){
-  background-color: transparent !important }
-
-
-/*****************************************************************************************************/
-/*****************************************************************************************************/
-
-#navigator-toolbox { border-bottom-color: #f3f2f1 !important; }
-
+}
 #navigator-toolbox { --tabs-border-color: transparent !important; }
 
-#urlbar{
+
+/* style that box thing to the left of the tabs */
+.titlebar-spacer[type="pre-tabs"] {
+	/*display: none !important;*/
   border: none !important;
-  font-weight: bold !important;
-  background-color: #eceff4 !important;
-  color: #2e3440 !important;
 }
-/*
+
+/* make url text and tab text THICC *//*
+#urlbar{
+  font-weight: bold !important;
+}*/
+
+/* the line below the navigator bar */
+#navigator-toolbox { border-bottom-color: transparent; !important; }
+
+/* url bar shadow fix */
 #urlbar:hover{
   box-shadow: none !important;
-} */
+} 
+#urlbar{box-shadow: none !important; }
 
-#TabsToolbar .tabbrowser-tab .tab-line {
-  background-color: #00aadd !important;
-  height: 3px !important;
-}
-
-/*****************************************************************************************************/
-/*****************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
 
 /* FINDBAR TWEAKS */
 
 findbar {
--moz-box-ordinal-group: 0   !important;
-direction:              rtl !important;
+direction:              rtl !important; 
 
-uncomment for speedy boi
+/* uncomment for speedy boi */
 transition-property:        unset !important;
 transition-duration:        unset !important;
 transition-timing-function: unset !important;
 	 
-These two lines should fix the border (previously its on the upside, you wanna flip it over)
+/* These two lines should fix the border (previously its on the upside, you wanna flip it over) */
 border-top-width:           0                                            !important;
 border-bottom:              1px solid var(--toolbox-border-bottom-color) !important;
 border-top:                 none                                         !important;
@@ -90,24 +90,9 @@ findbar {
     top: 0px;
     right: 0px;
 }
-
-/*****************************************************************************************************/
-/*****************************************************************************************************/
-
-/* REmove that box thing to the right of the tabs */
-.titlebar-placeholder[type="pre-tabs"] {
-display: none !important;
-width: 0px !important;
-max-width: 0px !important;
-}
-.titlebar-spacer[type="pre-tabs"] {
-display: none !important;
-width: 0px !important;
-max-width: 0px !important;
-}
-
-/*****************************************************************************************************/
-/*****************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
 
 /*Tabs below nav bar*/ /*
 #nav-bar { 
@@ -121,18 +106,17 @@ max-width: 0px !important;
 } */
 
 
-/*Hide tabs bar if one tab is opened*/ /*
+/* Hide tabs bar if one tab is opened */
+
 #tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox {
   min-height: 0 !important;
 }
-
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
   visibility: collapse !important;
 }
-
 #tabbrowser-tabs #tabs-newtab-button {
   visibility: collapse !important;
-} */
-
-/*****************************************************************************************************/
-/*****************************************************************************************************/
+}
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
