@@ -2,13 +2,13 @@
 /******************************************************************************************************************/
 /******************************************************************************************************************/
 
-/* Remove mac native buttons thing */
+/* Remove mac native close/minimize buttons */
 .titlebar-buttonbox-container { 
-  display: none; 
-  border-right: none
+	display: none; 
+	border-right: none
 }
 
-/* sytle tab highlight line */
+/* sytle tab highlight line (on top of the tab) */
 .tab-line {
     height: 3px !important;
     background-color: #f100a1 !important;
@@ -16,11 +16,13 @@
 
 /* Hide inactive tab close buttons until hovered */
 .tabbrowser-tab:not([pinned="true"]):not([selected]):not(:hover) .tab-close-button {
-  display: none !important; 
+  	display: none !important; 
 }
 
 /* Hide all tabs */ /*
-#TabsToolbar { visibility: collapse !important; } */
+#TabsToolbar { 
+	visibility: collapse !important; 
+}*/
 
 /* Hide tab borders */
 :root {
@@ -43,22 +45,26 @@
 /* style that box thing to the left of the tabs */
 .titlebar-spacer[type="pre-tabs"] {
 	/*display: none !important;*/
-  border: none !important;
+ 	border: none !important;
 }
 
-/* make url text and tab text THICC *//*
+/* make url search text text THICC *//*
 #urlbar{
-  font-weight: bold !important;
+	font-weight: bold !important;
 }*/
 
-/* the line below the navigator bar */
-#navigator-toolbox { border-bottom-color: transparent; !important; }
+/* style the line below the navigator bar */
+#navigator-toolbox { 
+	border-bottom-color: transparent; !important; 
+}
 
 /* url bar shadow fix */
 #urlbar:hover{
-  box-shadow: none !important;
+	box-shadow: none !important;
 } 
-#urlbar{box-shadow: none !important; }
+#urlbar{
+	box-shadow: none !important; 
+}
 
 /******************************************************************************************************************/
 /******************************************************************************************************************/
@@ -83,40 +89,29 @@ border-top:                 none                                         !import
 findbar .findbar-textbox { direction: ltr !important; }
 
 .browserContainer {
-    position: relative;
+	position: relative;
 }
 findbar {
     position: absolute;
     top: 0px;
     right: 0px;
 }
+
 /******************************************************************************************************************/
 /******************************************************************************************************************/
 /******************************************************************************************************************/
 
 /*Tabs below nav bar*/ /*
 #nav-bar { 
-  -moz-box-ordinal-group: 1 !important;
+ 	-moz-box-ordinal-group: 1 !important;
 }
 #PersonalToolbar { 
-  -moz-box-ordinal-group: 2 !important;
+ 	-moz-box-ordinal-group: 2 !important;
 }
 #titlebar { 
-  -moz-box-ordinal-group: 3 !important;
+ 	-moz-box-ordinal-group: 3 !important;
 } */
 
-
-/* Hide tabs bar if one tab is opened */
-
-#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox {
-  min-height: 0 !important;
-}
-#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
-  visibility: collapse !important;
-}
-#tabbrowser-tabs #tabs-newtab-button {
-  visibility: collapse !important;
-}
 /******************************************************************************************************************/
 /******************************************************************************************************************/
 /******************************************************************************************************************/
