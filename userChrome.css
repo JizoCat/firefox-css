@@ -44,8 +44,8 @@
 
 /* style that box thing to the left of the tabs */
 .titlebar-spacer[type="pre-tabs"] {
-	/*display: none !important;*/
  	border: none !important;
+	width: 18px !important;
 }
 
 /* make url search text text THICC *//*
@@ -80,7 +80,7 @@ transition-property:        unset !important;
 transition-duration:        unset !important;
 transition-timing-function: unset !important;
 	 
-/* These two lines should fix the border (previously its on the upside, you wanna flip it over) */
+/* fix the border of the find bar */
 border-top-width:           0                                            !important;
 border-bottom:              1px solid var(--toolbox-border-bottom-color) !important;
 border-top:                 none                                         !important;
@@ -101,7 +101,7 @@ findbar {
 /******************************************************************************************************************/
 /******************************************************************************************************************/
 
-/*Tabs below nav bar*/ /*
+/*Move the tabs below the navigator toolbox*/ /*
 #nav-bar { 
  	-moz-box-ordinal-group: 1 !important;
 }
