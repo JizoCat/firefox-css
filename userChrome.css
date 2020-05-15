@@ -2,29 +2,29 @@
 /******************************************************************************************************************/
 /******************************************************************************************************************/
 
-/* Remove mac native close/minimize buttons */
+/*remove MAC native Firefox buttons*/
 .titlebar-buttonbox-container { 
 	display: none; 
 	border-right: none
 }
 
-/* sytle tab highlight line (on top of the tab) */
+/*style the tab highlight line*/
 .tab-line {
     height: 3px !important;
-    background-color: #f100a1 !important;
+    background-color: #ff66aa !important;
 }
 
-/* Hide inactive tab close buttons until hovered */
+/*hide inactive tab close buttons until hovered*//*
 .tabbrowser-tab:not([pinned="true"]):not([selected]):not(:hover) .tab-close-button {
   	display: none !important; 
-}
+}*/
 
-/* Hide all tabs */ /*
+/*hide all tabs*//*
 #TabsToolbar { 
 	visibility: collapse !important; 
 }*/
 
-/* Hide tab borders */
+/*hide tab borders*/
 :root {
   --tabs-border: transparent !important;
 }
@@ -42,23 +42,23 @@
 #navigator-toolbox { --tabs-border-color: transparent !important; }
 
 
-/* style that box thing to the left of the tabs */
+/*style the box to the left of the tabs*/
 .titlebar-spacer[type="pre-tabs"] {
  	border: none !important;
-	width: 18px !important;
+	width: 0px !important;
 }
 
-/* make url search text text THICC *//*
+/*make url search text text THICC*//*
 #urlbar{
 	font-weight: bold !important;
 }*/
 
-/* style the line below the navigator bar */
+/*style the line below the navigator bar*/
 #navigator-toolbox { 
 	border-bottom-color: transparent; !important; 
 }
 
-/* url bar shadow fix */
+/*url bar shadow fix*/
 #urlbar:hover{
 	box-shadow: none !important;
 } 
@@ -66,42 +66,8 @@
 	box-shadow: none !important; 
 }
 
-/******************************************************************************************************************/
-/******************************************************************************************************************/
-/******************************************************************************************************************/
 
-/* FINDBAR TWEAKS */
-
-findbar {
-direction:              rtl !important; 
-
-/* uncomment for speedy boi */
-transition-property:        unset !important;
-transition-duration:        unset !important;
-transition-timing-function: unset !important;
-	 
-/* fix the border of the find bar */
-border-top-width:           0                                            !important;
-border-bottom:              1px solid var(--toolbox-border-bottom-color) !important;
-border-top:                 none                                         !important;
-}
-
-findbar .findbar-textbox { direction: ltr !important; }
-
-.browserContainer {
-	position: relative;
-}
-findbar {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-/******************************************************************************************************************/
-/******************************************************************************************************************/
-/******************************************************************************************************************/
-
-/*Move the tabs below the navigator toolbox*/ /*
+/*move the tabs below the navigator toolbox*/
 #nav-bar { 
  	-moz-box-ordinal-group: 1 !important;
 }
@@ -110,7 +76,65 @@ findbar {
 }
 #titlebar { 
  	-moz-box-ordinal-group: 3 !important;
-} */
+} 
+
+
+/*FINDBAR TEWAKS*/
+findbar {
+  -moz-box-ordinal-group: 0;
+  position: relative;
+  margin-top: -4px !important;
+  margin-bottom: calc(0px - 2 * var(--toolbarbutton-inner-padding) -  20px);
+  border-top: none !important;
+  transition: transform 82ms linear, opacity 82ms linear 32ms !important;
+  background: var(--toolbar-bgcolor) !important;  /* --lwt-accent-color for contrast */ 
+  /* Don't overlap with scrollbar */
+  /* margin-right: 16px; */
+}
+findbar .findbar-textbox {
+	width: 32em !important;
+	text-align: center !important;  
+} 
+findbar[hidden] {
+  	transform: translateY(-30px);
+}	
+findbar > .findbar-container {
+  	-moz-box-direction: reverse;
+}
+findbar .findbar-button {
+  	-moz-box-ordinal-group: 0;
+}
+findbar .found-matches {
+	-moz-box-ordinal-group: 2;
+	display: -moz-box; 
+	min-width: 200px;
+	text-align: right !important;
+	opacity: 0.75 !important;
+}
+findbar .findbar-find-fast.findbar-find-status {
+  	-moz-box-ordinal-group: 3;
+  	display: none !important;
+}
+
+findbar > .findbar-container > hbox {
+  	margin: 0 70px;
+}
+findbar > .findbar-container::before,
+findbar > .findbar-container::after {
+	content: "";
+	display: -moz-box;
+	-moz-box-flex: 1;
+  	-moz-box-ordinal-group: 0
+}
+findbar > .findbar-container::after { 
+	-moz-box-ordinal-group: 4;
+}
+
+/*show tabs on hover*/
+#navigator-toolbox:not(:hover) > #titlebar{ -moz-appearance: none !important }
+#navigator-toolbox:not(:hover)  #TabsToolbar:not([customizing]) { visibility: collapse }
+#navigator-toolbox:hover > #nav-bar:not([customizing]){ animation: slidein ease-out 66ms 1 }
+#navigator-toolbox:not(:hover) > #nav-bar:not([customizing]){ animation: slideout ease-out 66ms 1 }
 
 /******************************************************************************************************************/
 /******************************************************************************************************************/
