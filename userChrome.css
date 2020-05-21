@@ -1,16 +1,11 @@
-/******************************************************************************************************************/
-/******************************************************************************************************************/
-/******************************************************************************************************************/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
-/*remove MAC native Firefox buttons*/
-.titlebar-buttonbox-container { 
-	display: none; 
-	border-right: none
-}
+/* TAB TWEAKS */
 
 /*style the tab highlight line*/
 .tab-line {
-    height: 3px !important;
+    height: 2px !important;
     background-color: #ff66aa !important;
 }
 
@@ -22,52 +17,38 @@
 /*hide all tabs*//*
 #TabsToolbar { 
 	visibility: collapse !important; 
-}*/
-
-/*hide tab borders*/
-:root {
-  --tabs-border: transparent !important;
-}
-.tabbrowser-tab::before {
-  color: green !important; 
-  opacity: 0 !important; 
-}
-.tabbrowser-tab::after {
-  color: green !important; 
-  opacity: 0 !important; 
-}
-.titlebar-placeholder {
-  border: none !important;
-}
-#navigator-toolbox { --tabs-border-color: transparent !important; }
-
+}*
 
 /*style the box to the left of the tabs*/
 .titlebar-spacer[type="pre-tabs"] {
  	border: none !important;
-	width: 0px !important;
+	/*width: 0px !important;*/
 }
 
-/*make url search text text THICC*//*
-#urlbar{
-	font-weight: bold !important;
-}*/
+/* HIDE TAB BORDERS */
 
-/*style the line below the navigator bar*/
-#navigator-toolbox { 
-	border-bottom-color: transparent; !important; 
+:root {
+  --tabs-border: transparent !important;
 }
 
-/*url bar shadow fix*/
-#urlbar:hover{
-	box-shadow: none !important;
-} 
-#urlbar{
-	box-shadow: none !important; 
+/* Hide separators between background tabs */
+.tabbrowser-tab::before {
+	color: transparent!important; 
+	opacity: 0 !important; 
 }
 
+.tabbrowser-tab::after {
+  	color: transparent!important; 
+	opacity: 0 !important; 
+}
 
-/*move the tabs below the navigator toolbox*/
+/* Remove placeholder right border */
+.titlebar-placeholder {
+	border: none !important;
+}
+
+/* TABS BELOW NAV BAR */
+/*
 #nav-bar { 
  	-moz-box-ordinal-group: 1 !important;
 }
@@ -76,10 +57,64 @@
 }
 #titlebar { 
  	-moz-box-ordinal-group: 3 !important;
-} 
+} */
 
+/* show tabs on hover *//*
+#navigator-toolbox:not(:hover) > #titlebar{ -moz-appearance: none !important }
+#navigator-toolbox:not(:hover)  #TabsToolbar:not([customizing]) { visibility: collapse }
+#navigator-toolbox:hover > #nav-bar:not([customizing]){ animation: slidein ease-out 66ms 1 }
+#navigator-toolbox:not(:hover) > #nav-bar:not([customizing]){ animation: slideout ease-out 66ms 1 }
+*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* URL-BAR TWEAKS */
+
+/*make url search text text THICC*//*
+#urlbar{
+	font-weight: bold !important;
+}*/
+
+/*url bar shadow fix*/
+#urlbar:hover {
+	box-shadow: none !important;
+} 
+#urlbar {
+	box-shadow: none !important; 
+}
+
+#urlbar {
+	border: none !important
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* MISC. TWEAKS */
+
+/* style the nav bar */
+#navigator-toolbox {
+	border: none !important;
+	padding-bottom: 1px !important;	
+}
+
+#navigator-toolbox { --tabs-border-color: transparent !important; }
+
+#nav-bar {
+	border:none !important;
+}
+
+/*remove MAC native Firefox buttons*/
+.titlebar-buttonbox-container { 
+	display: none; 
+	border-right: none
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 /*FINDBAR TEWAKS*/
+
 findbar {
   -moz-box-ordinal-group: 0;
   position: relative;
@@ -130,12 +165,5 @@ findbar > .findbar-container::after {
 	-moz-box-ordinal-group: 4;
 }
 
-/*show tabs on hover*/
-#navigator-toolbox:not(:hover) > #titlebar{ -moz-appearance: none !important }
-#navigator-toolbox:not(:hover)  #TabsToolbar:not([customizing]) { visibility: collapse }
-#navigator-toolbox:hover > #nav-bar:not([customizing]){ animation: slidein ease-out 66ms 1 }
-#navigator-toolbox:not(:hover) > #nav-bar:not([customizing]){ animation: slideout ease-out 66ms 1 }
-
-/******************************************************************************************************************/
-/******************************************************************************************************************/
-/******************************************************************************************************************/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
