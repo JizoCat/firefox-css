@@ -1,3 +1,9 @@
+/* colors */
+PINK	- #FF66AA
+GREEN	- #66FFAA
+
+
+
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
@@ -18,7 +24,6 @@
 #TabsToolbar { 
 	visibility: collapse !important; 
 }*
-
 /*style the box to the left of the tabs*/
 .titlebar-spacer[type="pre-tabs"] {
  	border: none !important;
@@ -104,11 +109,12 @@
 	border:none !important;
 }
 
-/*remove MAC native Firefox buttons*/
-.titlebar-buttonbox-container { 
-	display: none; 
-	border-right: none
+.titlebar-buttonbox-container{ 
+	-moz-box-ordinal-group: 0 !important; 
+	padding-right: 0px !important;
+	margin-right: -26px !important;
 }
+
 
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
