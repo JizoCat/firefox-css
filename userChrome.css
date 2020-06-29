@@ -1,29 +1,16 @@
-/* colors */
-PINK	- #FF66AA
-GREEN	- #66FFAA
-
-
-
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
-/* TAB TWEAKS */
+/* FIREFOX CSS TWEAKS */
 
 /*style the tab highlight line*/
 .tab-line {
-    height: 2px !important;
+    height: 3px !important;
     background-color: #ff66aa !important;
 }
 
-/*hide inactive tab close buttons until hovered*//*
-.tabbrowser-tab:not([pinned="true"]):not([selected]):not(:hover) .tab-close-button {
-  	display: none !important; 
-}*/
-
-/*hide all tabs*//*
-#TabsToolbar { 
+/*hide all tabs*/ /*
+#TabsToolbar {
 	visibility: collapse !important; 
-}*
+} */
+
 /*style the box to the left of the tabs*/
 .titlebar-spacer[type="pre-tabs"] {
  	border: none !important;
@@ -31,7 +18,6 @@ GREEN	- #66FFAA
 }
 
 /* HIDE TAB BORDERS */
-
 :root {
   --tabs-border: transparent !important;
 }
@@ -41,18 +27,24 @@ GREEN	- #66FFAA
 	color: transparent!important; 
 	opacity: 0 !important; 
 }
-
 .tabbrowser-tab::after {
   	color: transparent!important; 
 	opacity: 0 !important; 
 }
 
-/* Remove placeholder right border */
+/* Remove tab right border */
 .titlebar-placeholder {
 	border: none !important;
 }
 
-/* TABS BELOW NAV BAR */
+/* Style the button-box */
+.titlebar-buttonbox-container{ 
+	-moz-box-ordinal-group: 0 !important; 
+	padding-right: 0px !important;
+	margin-right: -26px !important;
+}
+
+/* TABS BELOW NAVIGATION BAR */
 /*
 #nav-bar { 
  	-moz-box-ordinal-group: 1 !important;
@@ -63,15 +55,6 @@ GREEN	- #66FFAA
 #titlebar { 
  	-moz-box-ordinal-group: 3 !important;
 } */
-
-/* show tabs on hover *//*
-#navigator-toolbox:not(:hover) > #titlebar{ -moz-appearance: none !important }
-#navigator-toolbox:not(:hover)  #TabsToolbar:not([customizing]) { visibility: collapse }
-#navigator-toolbox:hover > #nav-bar:not([customizing]){ animation: slidein ease-out 66ms 1 }
-#navigator-toolbox:not(:hover) > #nav-bar:not([customizing]){ animation: slideout ease-out 66ms 1 }
-*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 /* URL-BAR TWEAKS */
 
@@ -88,15 +71,6 @@ GREEN	- #66FFAA
 	box-shadow: none !important; 
 }
 
-#urlbar {
-	/*border: none !important*/
-}
-
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
-/* MISC. TWEAKS */
-
 /* style the nav bar */
 #navigator-toolbox {
 	border: none !important;
@@ -109,18 +83,7 @@ GREEN	- #66FFAA
 	border:none !important;
 }
 
-.titlebar-buttonbox-container{ 
-	-moz-box-ordinal-group: 0 !important; 
-	padding-right: 0px !important;
-	margin-right: -26px !important;
-}
-
-
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
 /*FINDBAR TEWAKS*/
-
 findbar {
   -moz-box-ordinal-group: 0;
   position: relative;
@@ -170,6 +133,3 @@ findbar > .findbar-container::after {
 findbar > .findbar-container::after { 
 	-moz-box-ordinal-group: 4;
 }
-
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
