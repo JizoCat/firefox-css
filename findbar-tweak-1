@@ -1,4 +1,3 @@
-/*FINDBAR TEWAKS*/
 findbar {
   -moz-box-ordinal-group: 0;
   position: relative;
@@ -7,44 +6,52 @@ findbar {
   border-top: none !important;
   transition: transform 82ms linear, opacity 82ms linear 32ms !important;
   background: var(--toolbar-bgcolor) !important;  /* --lwt-accent-color for contrast */ 
+
   /* Don't overlap with scrollbar */
   /* margin-right: 16px; */
 }
+
 findbar .findbar-textbox {
-	width: 32em !important;
-	text-align: center !important;  
+  width: 32em !important;
+  text-align: center !important;  
 } 
+
 findbar[hidden] {
-  	transform: translateY(-30px);
-}	
+  transform: translateY(-30px);
+}
+
 findbar > .findbar-container {
-  	-moz-box-direction: reverse;
+  -moz-box-direction: reverse;
 }
+
 findbar .findbar-button {
-  	-moz-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
 }
+
 findbar .found-matches {
-	-moz-box-ordinal-group: 2;
-	display: -moz-box; 
-	min-width: 200px;
-	text-align: right !important;
-	opacity: 0.75 !important;
+  -moz-box-ordinal-group: 2;
+  display: -moz-box; 
+  min-width: 200px;
+  text-align: right !important;
+  opacity: 0.75 !important;
 }
+
 findbar .findbar-find-fast.findbar-find-status {
-  	-moz-box-ordinal-group: 3;
-  	display: none !important;
+  -moz-box-ordinal-group: 3;
+  display: none !important;
 }
 
 findbar > .findbar-container > hbox {
-  	margin: 0 70px;
+  margin: 0 70px;
 }
+
 findbar > .findbar-container::before,
 findbar > .findbar-container::after {
-	content: "";
-	display: -moz-box;
-	-moz-box-flex: 1;
-  	-moz-box-ordinal-group: 0
+  content: "";
+  display: -moz-box;
+  -moz-box-flex: 1;
+  -moz-box-ordinal-group: 0
 }
 findbar > .findbar-container::after { 
-	-moz-box-ordinal-group: 4;
+  -moz-box-ordinal-group: 4;
 }
