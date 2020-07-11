@@ -1,143 +1,43 @@
-/* FIREFOX CSS TWEAKS */
 
-/*style the tab highlight line*/
+/* generic fixes */
 .tab-line {
-    height: 3px !important;
-    background-color: #ff66aa !important;
+	height: 3px !important;
 }
 
-/*hide all tabs*/ /*
-#TabsToolbar {
-	visibility: collapse !important; 
-} */
-
-/*style the box to the left of the tabs*/
+/* Removing Borders */
 .titlebar-spacer[type="pre-tabs"] {
- 	border: none !important;
+	border: none !important;
 	/*width: 0px !important;*/
 }
-
-/* HIDE TAB BORDERS */
-:root {
-  --tabs-border: transparent !important;
-}
-
-/* Hide separators between background tabs */
-.tabbrowser-tab::before {
+.tabbrowser-tab::after {
 	color: transparent!important; 
 	opacity: 0 !important; 
 }
-.tabbrowser-tab::after {
-  	color: transparent!important; 
-	opacity: 0 !important; 
-}
-
-/* Remove tab right border */
-.titlebar-placeholder {
-	border: none !important;
-}
-
-/* Style the button-box */
-.titlebar-buttonbox-container{ 
-	-moz-box-ordinal-group: 0 !important; 
-	padding-right: 0px !important;
-	margin-right: -26px !important;
-}
-
-/* TABS BELOW NAVIGATION BAR */
-/*
-#nav-bar { 
- 	-moz-box-ordinal-group: 1 !important;
-}
-#PersonalToolbar { 
- 	-moz-box-ordinal-group: 2 !important;
-}
-#titlebar { 
- 	-moz-box-ordinal-group: 3 !important;
-} */
-
-/* URL-BAR TWEAKS */
-
-/*make url search text text THICC*//*
-#urlbar{
-	font-weight: bold !important;
-}*/
-
-/*url bar shadow fix*/
-#urlbar:hover {
-	box-shadow: none !important;
-} 
 #urlbar {
 	box-shadow: none !important; 
 }
 
-/* style the nav bar */
+/* Tab Opacity Fix */
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){
+	background-color: transparent !important;
+}
+
+/* Padding Fixes*/
+.titlebar-buttonbox-container{ 
+	padding-right: 0px !important;
+	margin-right: -26px !important;
+}
+
+/* nav bar border fixes */
 #navigator-toolbox {
 	border: none !important;
 	padding-bottom: 1px !important;	
 }
-
-#navigator-toolbox { --tabs-border-color: transparent !important; }
-
-#nav-bar {
-	border:none !important;
+#navigator-toolbox { 
+	--tabs-border-color: transparent !important; 
 }
 
-/* Findbar Tweaks */
-findbar {
-	-moz-box-ordinal-group: 0;
-	position: relative;
-	margin-top: -4px !important;
-	margin-bottom: calc(0px - 2 * var(--toolbarbutton-inner-padding) -  20px);
-	border-top: none !important;
-	transition: transform 82ms linear, opacity 82ms linear 32ms !important;
-	background: var(--toolbar-bgcolor) !important;  /* --lwt-accent-color for contrast */ 
-  
-	/* Don't overlap with scrollbar */
-	/* margin-right: 16px; */
-  }
-  
-  findbar .findbar-textbox {
-	width: 32em !important;
-	text-align: center !important;  
-  } 
-  
-  findbar[hidden] {
-	transform: translateY(-30px);
-  }
-  
-  findbar > .findbar-container {
-	-moz-box-direction: reverse;
-  }
-  
-  findbar .findbar-button {
-	-moz-box-ordinal-group: 0;
-  }
-  
-  findbar .found-matches {
-	-moz-box-ordinal-group: 2;
-	display: -moz-box; 
-	min-width: 200px;
-	text-align: right !important;
-	opacity: 0.75 !important;
-  }
-  
-  findbar .findbar-find-fast.findbar-find-status {
-	-moz-box-ordinal-group: 3;
-	display: none !important;
-  }
-  
-  findbar > .findbar-container > hbox {
-	margin: 0 70px;
-  }
-  
-  findbar > .findbar-container::before,
-  findbar > .findbar-container::after {
-	content: "";
-	display: -moz-box;
-	-moz-box-flex: 1;
-	-moz-box-ordinal-group: 0
-  }
-  findbar > .findbar-container::after { 
-	-moz-box-ordinal-group: 4;
-  }
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
