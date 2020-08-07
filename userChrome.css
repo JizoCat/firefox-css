@@ -1,10 +1,8 @@
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 /* generic fixes */
 .tab-line {
 	height: 3px !important;
+	background-color: #FF007F   !important;
 }
 
 /* Removing Borders */
@@ -18,6 +16,11 @@
 }
 #urlbar {
 	box-shadow: none !important; 
+	border: none !important;
+	/*border: 1px !important;*/
+	background-color: #f9f9fa !important;
+	font-weight: bold !important;
+	color: #FF007F   !important
 }
 
 /* Tab Opacity Fix */
@@ -41,6 +44,41 @@
 	--tabs-border-color: transparent !important; 
 }
 
+/* Bookmarks toolbar is visible only on new tab page, just like Chrome. */
+
+ #main-window #PersonalToolbar {
+	visibility: collapse !important;
+}
+	#main-window[title^="about:newtab"] #PersonalToolbar,
+  	#main-window[title^="New Tab"] #PersonalToolbar,
+	#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
+ 	#main-window[title^="Customize Firefox"] #PersonalToolbar {
+	visibility: visible !important;
+}
+
+/* Center bookmark toolbar items */
+#PlacesToolbarItems {
+	-moz-box-pack: center;
+}
+
+#PlacesToolbar {
+	padding-top: 8px !important;
+}
+
+/* #urlbar { 
+	text-align: center;
+} 
+
+.urlbarView-row-inner {
+	padding-left: 30% !important;
+} */
+
+#extension-icon,
+#identity-icon-label {
+    display: none !important;
+}
+
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
