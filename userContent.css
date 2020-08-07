@@ -1,0 +1,5 @@
+@-moz-document url(about:newtab) {
+    .search-inner-wrapper, .icon-settings {
+      display: none !important;
+    }
+}
