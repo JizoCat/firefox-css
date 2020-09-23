@@ -1,8 +1,7 @@
 
-/* generic fixes */
 .tab-line {
 	height: 3px !important;
-	background-color: #FF007F   !important;
+	background-color: !important;
 }
 
 /* Removing Borders */
@@ -18,9 +17,9 @@
 	box-shadow: none !important; 
 	border: none !important;
 	/*border: 1px !important;*/
-	background-color: #f9f9fa !important;
-	font-weight: bold !important;
-	color: #FF007F   !important
+	font-weight: 600 !important;
+	/*background-color: #3b4252!important;*/
+	/* color: #eceff4  !important; */
 }
 
 /* Tab Opacity Fix */
@@ -31,13 +30,13 @@
 /* Padding Fixes*/
 .titlebar-buttonbox-container{ 
 	padding-right: 0px !important;
-	margin-right: -26px !important;
+	margin-right: 0px !important;
 }
 
 /* nav bar border fixes */
 #navigator-toolbox {
-	border: none !important;
-	padding-bottom: 1px !important;
+	border-bottom-color: #ffddee !important;
+	padding-bottom: 0px !important;
 	padding-top: 0px !important;	
 }
 #navigator-toolbox { 
@@ -62,7 +61,7 @@
 }
 
 #PlacesToolbar {
-	padding-top: 8px !important;
+	padding-top: 4px !important;
 }
 
 /* #urlbar { 
@@ -77,8 +76,6 @@
 #identity-icon-label {
     display: none !important;
 }
-
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
