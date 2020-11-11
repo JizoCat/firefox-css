@@ -1,81 +1,109 @@
+/* XXXX XXXX XXXX XXXX XXXX *//* XXXX XXXX XXXX XXXX XXXX *//* XXXX XXXX XXXX XXXX XXXX */
+
+
+/* Style the tab highlight line */
 
 .tab-line {
-	height: 3px !important;
+	height: 2px !important;
 	background-color: !important;
 }
 
-/* Removing Borders */
+
+/* Removing borders between tabs and url bar */
+
 .titlebar-spacer[type="pre-tabs"] {
 	border: none !important;
 	/*width: 0px !important;*/
 }
+
 .tabbrowser-tab::after {
 	color: transparent!important; 
 	opacity: 0 !important; 
 }
+
 #urlbar {
 	box-shadow: none !important; 
 	border: none !important;
 	/*border: 1px !important;*/
-	font-weight: 600 !important;
+	font-weight: 450 !important;
 	/*background-color: #3b4252!important;*/
 	/* color: #eceff4  !important; */
 }
 
-/* Tab Opacity Fix */
+
+/* Tab hover opacity fix */
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){
 	background-color: transparent !important;
 }
 
-/* Padding Fixes*/
+
+/* Padding fix for the left-tab thing */
 .titlebar-buttonbox-container{ 
 	padding-right: 0px !important;
-	margin-right: 0px !important;
+	margin-right: -25px !important;
 }
 
-/* nav bar border fixes */
+
+/* Nav-bar border fixes */
 #navigator-toolbox {
-	border-bottom-color: #ffddee !important;
+	/*border-bottom-color: #ffddee !important;*/
 	padding-bottom: 0px !important;
 	padding-top: 0px !important;	
+	/*background: #222222*/
 }
+
 #navigator-toolbox { 
 	--tabs-border-color: transparent !important; 
 }
 
 /* Bookmarks toolbar is visible only on new tab page, just like Chrome. */
-
- #main-window #PersonalToolbar {
+/*
+#main-window #PersonalToolbar {
 	visibility: collapse !important;
 }
-	#main-window[title^="about:newtab"] #PersonalToolbar,
-  	#main-window[title^="New Tab"] #PersonalToolbar,
-	#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
- 	#main-window[title^="Customize Firefox"] #PersonalToolbar {
+  	#main-window[title^="WaterFox"] #PersonalToolbar,
+ 	#main-window[title^="Customize WaterFox"] #PersonalToolbar {
 	visibility: visible !important;
 }
+*/
 
 /* Center bookmark toolbar items */
+
 #PlacesToolbarItems {
 	-moz-box-pack: center;
 }
 
-#PlacesToolbar {
-	padding-top: 4px !important;
+#PlacesToolbar { /* the bookmarks bar */
+	padding-top: 0px !important;
 }
 
-/* #urlbar { 
+
+/* Centre alignt the search bar text*/
+/* 
+#urlbar { 
 	text-align: center;
 } 
-
 .urlbarView-row-inner {
 	padding-left: 30% !important;
-} */
+}
+*/
+
+/* Remove the extention menu thing on new tabs that show used extensions */
 
 #extension-icon,
 #identity-icon-label {
     display: none !important;
 }
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+/* content separator color */
+/*
+:root {
+  --chrome-content-separator-color: rgba(0,0,0,0) !important; 
+}
+*/
+
+/* XXXX XXXX XXXX XXXX XXXX *//* XXXX XXXX XXXX XXXX XXXX *//* XXXX XXXX XXXX XXXX XXXX */
+
+/* Resources */
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
