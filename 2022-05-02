@@ -1,0 +1,225 @@
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ JIZOCAT FIREFOX CSS AWSL ■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+/* 
+	github.com/JizoCat
+	twitter.com/WAnuko_
+	osu.ppy.sh/u/WAnuko_ 
+*/
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ NAVIGATION BAR FIXES ■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+/* navigation bar appearance */
+#navigator-toolbox {
+	border-bottom-color: transparent !important;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+	/*background: #222222*/
+	box-shadow: none !important;
+	border: none !important;
+}
+
+/* navigation bar content separator line fix */
+#navigator-toolbox { 
+	--tabs-border-color: transparent !important; 
+}
+:root {
+	--chrome-content-separator: 0px !important;
+	--chrome-content-separator-color: #FFFFFF[100] !important;
+}
+
+/* Remove the extention menu thing on new tabs that show used extensions */
+#extension-icon,
+#identity-icon-label {
+    display: none !important;
+}
+
+/* Center bookmark toolbar items */
+#PlacesToolbarItems {
+	-moz-box-pack: center;
+}
+#PlacesToolbar { /* the bookmarks bar */
+	padding-top: -3px !important;
+}
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ TAB FIXES ■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+/* fix tab spacing */ 
+.titlebar-spacer[type="pre-tabs"] {
+	border: none !important;
+	width: 20px !important;	
+}
+.tabbrowser-tab::after {
+	color: transparent!important; 
+	opacity: 0 !important; 
+}
+.tabbrowser-tab::before {
+	color: transparent!important; 
+	opacity: 0 !important; 
+}
+
+/* Always show tab close button on hover and never otherwise */
+.tabbrowser-tab .tab-close-button{
+	display:none;
+}
+  .tabbrowser-tab:not([pinned]):hover .tab-close-button{
+	display:-moz-box !important;
+}
+
+/* Background tab hover colours */
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){
+	color: #ffffff !important;
+	opacity: 0.5 !important;
+}
+
+/* Safari Like Tabs Why 100vw? Tab closing requires width animation to end and "none" can't be animated */
+.tabbrowser-tab[fadein]:not([style^="max-width"]){ max-width: 100vw !important }
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ Firefox Compact Mode ■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/* Firefox Compact Mode
+ *
+ * Copyright (c) 2021 Danny Colin
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+:root {
+	/* Tabbar: reduce tab margin */
+	--tab-block-margin: 4px 3px !important;
+}
+  
+/* Tab: Reduce height */
+.tabbrowser-tab {
+	min-height: 24px !important;
+}
+  
+/* Tab: Ensure tab height doesn't augment when arrowscrollbox is visible  */ 
+#tabbrowser-arrowscrollbox {
+	--tab-min-height: 31px !important;
+	max-height: var(--tab-min-height);
+}
+  
+/* Tab: Attention icon */
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]), .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+	background-position-x: left 2px !important;
+	background-position-y: bottom 12.5px !important;
+}
+  
+/* URLBar: Fix vertical alignment */
+#urlbar[breakout=true]:not([open="true"]) {
+	--urlbar-height: 20px !important;
+	--urlbar-toolbar-height: 24px !important;
+}
+  
+/* URLBar: Fix URL address vertical aligment when megabar is open */
+#urlbar[breakout=true][open="true"] {
+	--urlbar-toolbar-height: 30px !important;
+}
+  
+/* URLBar: Reduce row items padding */
+.urlbarView-row-inner {
+	padding-inline: var(--urlbarView-item-inline-padding);
+	padding-block: 2px !important;
+}
+  
+/* URLBar: Reduce and realign row bookmark icons */
+.urlbarView-type-icon {
+	width: 10px !important;
+	height: 10px !important;
+	margin-bottom: 0 !important;
+	margin-inline-start: 10px !important;
+}
+  
+/* URLBar: Reduce "This time, serach with" padding */
+#urlbar .search-one-offs:not([hidden]) {
+	padding-block: 4px !important;
+}
+  
+/* Searchbar: Ensure toolbar height doesn't augment when searchbar is visible */
+#urlbar-container, 
+#search-container {
+	padding-block: 0 !important;
+}
+  
+/* Searchbar: Make sure the min-height of the input is the same as the popup */
+#search-container {
+	min-width: 192px !important;
+}
+  
+/* Toolbar: Reduce spacing */
+#urlbar-container {
+	--urlbar-container-height: 30px !important;
+	margin-top: 0 !important;
+}
+  
+/* Reload Button: Fix vertical alignment */
+#reload-button {
+	margin-block-start: -2px !important;
+}
+  
+/* AppMenu: Header */
+.panel-header {
+	padding: 4px 0 0 4px !important;
+}
+  
+/* AppMenu: Header button */
+.panel-header > .subviewbutton-back {
+	padding: 4px !important;
+}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ FINDBAR CODE ■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+.findbar-match-diacritics,
+.findbar-case-sensitive,
+.findbar-highlight,
+.findbar-entire-word,
+.findbar-find-status,
+.find-status-icon {
+    display: none !important;
+}
+
+.findbar-label 
+
+.browserContainer {
+    position: relative;
+}
+
+.browserContainer > findbar {
+    -moz-box-ordinal-group: 0;
+    position: absolute !important;
+    display: flex !important;
+    visibility: visible !important;
+	width: 400px !important;
+    flex-flow: row nowrap;
+    align-items: center;
+    top: 0 !important;
+    left: 1.5em;
+	padding: 0 !important;
+    border: 0px solid transparent !important;
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    border-top: none !important;
+    background-image: none !important;
+    transition-property: transform, opacity, width, left, right !important;
+    transition-duration: 0.1s, 0.1s, 0.1s, 0.1s, 0.1s !important;
+    transition-delay: 0s, 0s, 0s, 0s, 0s !important;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out, ease-in-out !important;
+    z-index: 1 !important;
+    animation: 0.3s ease-in-out findbar-down;
+    overflow: hidden !important;
+    transform-style: preserve-3d !important;
+    backface-visibility: hidden !important;
+}
+
+.findbar-textbox {
+    border: none !important;
+    width: -moz-available !important;
+    border-radius: 1 !important;
+    outline: none !important;
+    height: var(--findbar-height, 22px) !important;
+    padding-inline: 5px !important;
+    -moz-box-flex: 1 !important;
+}
