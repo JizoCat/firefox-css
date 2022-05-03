@@ -9,3 +9,41 @@
       display: none !important;
     }
 }
+
+
+
+@-moz-document url("about:home"), url("about:newtab"){
+    .logo{ display: none !important }
+    .wordmark{ margin: 0 !important }
+    .icon-settings { display: none !important; }
+    .search-wrapper input { display: none!important; }
+    .search-wrapper .logo-and-wordmark .wordmark { display: none!important; }
+    .search-wrapper .logo-and-wordmark { margin-bottom: 100px!important; padding-top: 100px!important; }
+    .search-button{display:none !important;}
+  }
+  
+/*wallpaper*/
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) { .click-target-container *, .top-sites-list * { color: #fff !important ; text-shadow: 2px 2px 2px #000 !important ; }
+body { background: url(orca5.png) !important ; background-size: cover !important ; } }
+
+/* OG LOGO */
+
+/*For Home Screen*/
+@-moz-document url(about:home), url(about:newtab){
+	.logo {background-image: url("firefox-logo.svg") !important;}
+}
+
+/*For Private Home Screen*/
+@-moz-document url(about:privatebrowsing) {
+	.logo {background-image: url("firefox-logo.svg") !important;}
+}
+
+tab-item:-moz-any([data-current-uri^="about:newtab"])
+tab-favicon .favicon-image {
+  display: none;
+}
+
+tab-item:-moz-any([data-current-uri^="about:newtab"])
+tab-favicon {
+  background: url("https://searchfox.org/mozilla-central/source/mobile/android/branding/beta/content/favicon64.png") no-repeat center / 100% !important;
+}
