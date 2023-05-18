@@ -1,0 +1,269 @@
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ JIZOCAT FIREFOX CSS ■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+/* 
+	github.com/JizoCat
+	twitter.com/WAnuko_
+	osu.ppy.sh/u/WAnuko_ 
+*/
+
+/* FONT CHANGES */
+@font-face {
+    font-family: "AG"; 
+    src: url("/Users/benhe/Library/Application Support/Firefox/Profiles/x0uurxcv.Wanuko/chrome/Akzidenz-Grotesk.ttf");
+}
+@font-face {
+    font-family: "DIN Mittelschrift";
+    src: url("/Users/benhe/Library/Application Support/Firefox/Profiles/x0uurxcv.Wanuko/chrome/DINMittelschrift.ttf")
+}
+@font-face {
+    font-family: "FF DIN";
+    src: url("/Users/benhe/Library/Application Support/Firefox/Profiles/x0uurxcv.Wanuko/chrome/FF Din family font/FF DIN Medium/FF_DIN_Medium.otf")
+}
+
+*{
+    font-family: "FF DIN", sans-serif !important;
+    font-size: 11pt !important; 
+    /*font-weight: normal !important;*/
+}
+.tab-label {
+    text-shadow: none !important;
+    font-size: 10pt !important;
+}
+.tabbrowser-tab .tab-icon-image {
+    width: 12px !important;
+    height: 12px !important;
+}
+.tab-text[selected] {  
+    /*font-weight: 600 !important;*/
+    text-decoration: underline !important;
+}
+#PersonalToolbar .bookmark-item > .toolbarbutton-text {
+    font-size: 10pt !important;
+}
+#PersonalToolbar .bookmark-item > .toolbarbutton-icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+#urlbar, #urlbar *{ 
+    font-size: 12pt !important 
+}
+
+/* ICON CHANGES */
+#back-button image {    
+    list-style-image: url("icons/back.svg") !important;
+}
+#forward-button image {
+    list-style-image: url("icons/forward.svg") !important;
+    padding-inline-start: 5px !important;
+}
+#PanelUI-menu-button {
+    list-style-image: url("icons/menu.svg") !important;
+}
+#PanelUI-menu-button[badge-status|="update"] {
+    list-style-image: url("icons/menu-update.svg") !important;
+}
+.tab-icon-overlay[soundplaying],
+.tab-icon-sound {
+    list-style-image: url("icons/audio.svg") !important;
+}
+.tab-icon-overlay[muted],
+.tab-icon-sound[muted] {
+    list-style-image: url("icons/audio-muted.svg") !important;
+}
+toolbarbutton[class="bookmark-item"][container="true"] > .toolbarbutton-icon {
+    list-style-image: url("icons/folder.svg") !important;
+}
+#nav-bar-overflow-button {
+    list-style-image: url("icons/overflow.svg") !important;
+}
+#tabs-newtab-button,
+#new-tab-button {
+    list-style-image: url("icons/new-tab.svg") !important;
+}
+#developer-button {
+    list-style-image: url("icons/developer.svg") !important;
+}
+/*new tab favicon*/
+.tab-icon-image[src="chrome://branding/content/icon32.png"] {
+    content: url("icons/firefox-logo.svg")!important;
+}
+
+
+/* center the url bar text */
+#urlbar:not([focused]) #urlbar-input,
+#urlbar:not([focused]) .urlbar-input{ 
+    text-align: center !important; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Remove tab close button. Appear on hover with smooth transitions */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+	display: -moz-box !important;
+	opacity: 0;
+	visibility: collapse !important;
+	transition: all 200ms ease-in-out, fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+.tabbrowser-tab:not([pinned]):hover  .tab-close-button {
+	opacity: 1;
+	visibility: visible !important;
+	transition: all 200ms ease-in-out, fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;	
+}
+  .tabbrowser-tab:not([pinned]):hover  .tab-close-button:hover {
+	fill: #FF0000 !important;
+	transition: all 200ms ease-in-out, fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;	
+}
+
+/* navigation bar content separator line fix */
+#navigator-toolbox { 
+	--tabs-border-color: transparent !important; 
+}
+:root {
+	--chrome-content-separator: 0px !important;
+	--chrome-content-separator-color: #FFFFFF[100] !important;
+}
+
+/* Remove the extention menu thing on new tabs that show used extensions */
+#extension-icon,
+#identity-icon-label {
+    display: none !important;
+}
+
+/* Center bookmark toolbar items */
+#navigator-toolbox #PersonalToolbar {
+    -moz-box-ordinal-group: 1 !important;
+    order: 1 !important;
+}
+
+.tabbrowser-tab:is([visuallyselected="true"], [multiselected])>.tab-stack>.tab-background {
+    box-shadow: none !important;
+}
+
+#navigator-toolbox { --lwt-tabs-border-color: none !important; }
+
+#tabbrowser-tabs { --lwt-tab-line-color: #77dd7755 !important; 
+}/*
+:root .tab-background:not([selected]){
+    border: 1px solid #ff669922 !important;
+}*/
+/*background-color: #d5d0d9;*/
+.tab-background[selected]{ background: #e9f2ec !important }
+
+/* Reduce spacing between pinned and regular tabs */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0px !important;
+}
+
+/* change highlight color of the autocomplete */
+:root
+{
+  --autocomplete-popup-highlight-background: rgba(255, 255, 255, .1) !important;
+}
+
+  
+/* Firefox Compact Mode
+ *
+ * Copyright (c) 2021 Danny Colin
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+:root {
+  /* Tabbar: reduce tab margin */
+  --tab-block-margin: 4px 3px !important;
+}
+
+/* Tab: Reduce height */
+.tabbrowser-tab {
+  min-height: 24px !important;
+}
+
+/* Tab: Ensure tab height doesn't augment when arrowscrollbox is visible  */ 
+#tabbrowser-arrowscrollbox {
+  --tab-min-height: 31px !important;
+  max-height: var(--tab-min-height);
+}
+
+/* Tab: Attention icon */
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]), .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+  background-position-x: left 2px !important;
+  background-position-y: bottom 12.5px !important;
+}
+
+/* URLBar: Fix vertical alignment */
+#urlbar[breakout=true]:not([open="true"]) {
+	--urlbar-height: 26px !important;
+	--urlbar-toolbar-height: 30px !important;
+}
+
+/* URLBar: Fix URL address vertical aligment when megabar is open */
+#urlbar[breakout=true][open="true"] {
+	--urlbar-toolbar-height: 30px !important;
+}
+
+/* URLBar: Reduce row items padding */
+.urlbarView-row-inner {
+	padding-inline: var(--urlbarView-item-inline-padding);
+	padding-block: 1px !important;
+}
+
+/* URLBar: Reduce and realign row bookmark icons */
+.urlbarView-type-icon {
+	width: 10px !important;
+	height: 10px !important;
+	margin-bottom: 0 !important;
+	margin-inline-start: 10px !important;
+}
+
+/* URLBar: Reduce "This time, serach with" padding */
+#urlbar .search-one-offs:not([hidden]) {
+	padding-block: 4px !important;
+}
+
+/* Searchbar: Ensure toolbar height doesn't augment when searchbar is visible */
+#urlbar-container, 
+#search-container {
+	padding-block: 0 !important;
+}
+
+/* Searchbar: Make sure the min-height of the input is the same as the popup */
+#search-container {
+  min-width: 192px !important;
+}
+
+/* Toolbar: Reduce spacing */
+#urlbar-container {
+	--urlbar-container-height: 30px !important;
+  margin-top: 0 !important;
+}
+
+/* Reload Button: Fix vertical alignment */
+#reload-button {
+	margin-block-start: -2px !important;
+}
+
+/* AppMenu: Header */
+.panel-header {
+	padding: 4px 0 0 4px !important;
+}
+
+/* AppMenu: Header button */
+.panel-header > .subviewbutton-back {
+	padding: 4px !important;
+}
+
+#nav-bar .toolbarbutton-1 {
+    margin-right: -6px !important;
+}
+
+
+
+
+  
+
+
+
+
