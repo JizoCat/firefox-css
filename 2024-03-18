@@ -1,0 +1,267 @@
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ JIZOCAT FIREFOX CSS ■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+#urlbar {
+  border: 1px solid rgba(255,0,0, 0.5);
+  border-radius: 5px;
+}
+
+/* change highlight color of the autocomplete */
+:root{--autocomplete-popup-hover-background: rgba(255,0,0,0.25) !important; } 
+.urlbarView-row[selected], .urlbarView-row[row-selectable]:not([selected]):hover { 
+background-color: var(--autocomplete-popup-hover-background)      !important; 
+}
+
+.tab-text[selected] {  
+    text-decoration: underline !important;
+    font-style: italic !important;
+}
+
+/* ICON CHANGES */ /*
+#back-button image {    
+    list-style-image: url("icons/back.svg") !important;
+}
+#forward-button image {
+    list-style-image: url("icons/forward.svg") !important;
+    padding-inline-start: 5px !important;
+}
+#PanelUI-menu-button {
+    list-style-image: url("icons/menu.svg") !important;
+}
+#PanelUI-menu-button[badge-status|="update"] {
+    list-style-image: url("icons/menu-update.svg") !important;
+}
+.tab-icon-overlay[soundplaying],
+.tab-icon-sound {
+    list-style-image: url("icons/audio.svg") !important;
+}
+.tab-icon-overlay[muted],
+.tab-icon-sound[muted] {
+    list-style-image: url("icons/audio-muted.svg") !important;
+}
+toolbarbutton[class="bookmark-item"][container="true"] > .toolbarbutton-icon {
+    list-style-image: url("icons/folder.svg") !important;
+}
+#nav-bar-overflow-button {
+    list-style-image: url("icons/overflow.svg") !important;
+}
+#tabs-newtab-button,
+#new-tab-button {
+    list-style-image: url("icons/new-tab.svg") !important;
+}
+#developer-button {
+    list-style-image: url("icons/developer.svg") !important;
+}
+.tab-icon-image[src="chrome://branding/content/icon32.png"] {
+    content: url("icons/firefox-logo.svg")!important;
+} */
+
+
+
+/* center the url bar text */ 
+#urlbar:not([focused]) #urlbar-input,
+#urlbar:not([focused]) .urlbar-input{ 
+    text-align: center !important; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+} 
+
+/* Remove tab close button. Appear on hover with smooth transitions */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+	opacity: 0;
+	visibility: collapse !important;
+    background-color: rgba(0,0,0,0) !important;
+	transition: all 10ms ease-in-out, fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+.tabbrowser-tab:not([pinned]):hover  .tab-close-button {
+	opacity: 1;
+	visibility: visible !important;
+    background-color: rgba(0,0,0,0) !important;
+	transition: all 10ms ease-in-out, fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;	
+}
+
+.tab-close-button {
+  width: 40px !important;
+  height: 24px !important;
+  padding: 6px !important;
+  margin: 2px !important;
+  margin-inline-end: -7px !important;
+}
+
+
+/* navigation bar content separator line fix */
+#navigator-toolbox { 
+	--tabs-border-color: transparent !important; 
+}
+:root {
+	--chrome-content-separator: 0px !important;
+	--chrome-content-separator-color: #FFFFFF[100] !important;
+}
+
+
+/* Remove the extention menu thing on new tabs that show used extensions */
+  #extension-icon, #identity-icon-label {display: none !important;}
+  .tabbrowser-tab:is([visuallyselected="true"], [multiselected])>.tab-stack>.tab-background {
+      box-shadow: none !important;
+}
+
+
+#nav-bar .toolbarbutton-1 {
+    margin-right: -4px !important;
+}
+
+
+/* URLBar: Reduce row items padding */
+.urlbarView-row-inner {
+	padding-inline: var(--urlbarView-item-inline-padding);
+	padding-block: 2px !important;
+}
+
+#PlacesToolbarItems {
+display: flex !important;
+justify-content: center !important;
+}
+
+#nav-bar{
+  background-color: white !important;
+}
+
+
+
+/* Change tab outline width */
+.tab-line[selected="true"]::before {
+    width: 40px !important; /* Adjust the width as needed */
+    border-radius: 0 !important;
+    background-color: blue !important; /* Change the color as needed */
+}
+
+
+
+
+
+
+#TabsToolbar,#nav-bar{
+    box-shadow:none !important;
+}
+
+:root[uidensity="compact"] {
+    --tab-min-height: 22px !important;
+    --tab-border-radius: 0px !important;
+    --tab-block-margin: 0 !important;
+}
+.tabbrowser-tab[selected] {
+  max-height: 22px !important;
+  min-height: 22px !important;  
+}   
+tab:not([selected="true"]) {
+  max-height: 22px !important;
+  min-height: 22px !important;  
+}
+.tab-background{margin-bottom:-2px!important};
+
+
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+    height: initial !important; 
+}
+
+
+/* Change the height of the navbar *//*
+#nav-bar {
+  height: 28px;
+}*/
+
+/* Move the URL box (address bar) up by adjusting the margin-top */
+#urlbar {
+  margin-top: 0px;
+}
+
+/*
+#navigator-toolbox { --lwt-tabs-border-color: transparent !important;}
+#navigator-toolbox { --lwt-tabs-border-color: none !important; }
+*/
+
+#tabbrowser-tabs {
+    --lwt-tab-line-color: rgba(255,0,0, 0.5) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EdgeFr-Fox by bmFtZQ - findbar.css */
+.findbar-find-previous,
+.findbar-find-next,
+.close-icon {
+  border-radius: var(--toolbarbutton-border-radius) !important;
+}
+.findbar-textbox {
+  border: 0 !important;
+  border-radius: calc(var(--toolbarbutton-border-radius) + 2px) !important;
+}
+.findbar-textbox:-moz-lwtheme {
+  background-color: var(--toolbar-field-background-color) !important;
+}
+.findbar-textbox:focus {
+  outline: 2px solid var(--focus-outline-color, -moz-accent-color) !important;
+  outline-offset: -1px !important;
+}
+.findbar-textbox[status="notfound"] {
+  outline: 2px solid var(--input-error-border-color, #E22850) !important;
+  outline-offset: -1px !important;
+}
+.findbar-container {
+  overflow-inline: visible !important;
+}
+.close-icon:not([disabled]):hover,
+.findbar-find-previous:not([disabled]):hover,
+.findbar-find-next:not([disabled]):hover {
+  background: var(--toolbarbutton-hover-background, rgba(190,190,190,.2)) !important;
+}
+.close-icon:not([disabled]):hover:active,
+.findbar-find-previous:not([disabled]):hover:active,
+.findbar-find-next:not([disabled]):hover:active {
+  background: var(--toolbarbutton-active-background, rgba(190,190,190,.4)) !important;
+}
+findbar{
+    border: none !important;
+}
+
